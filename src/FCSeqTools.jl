@@ -436,10 +436,10 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
     score_vector=Float32[]
     contact_matrix=zeros(Int8,length(number_matrix[1,:]),length(number_matrix[1,:]))
     log_z=Float32(0)
-    println("The sequences have L = $(length(number_matrix[1,:])")
+    println("The sequences have L = $(length(number_matrix[1,:]))")
     println("Fully connected model has ",n_fully_connected_edges," edges and a score around ~ 0.95")
     open(filename, "w") do f  
-    write(f,"The sequences have L = $(length(number_matrix[1,:])")
+    write(f,"The sequences have L = $(length(number_matrix[1,:]))")
     write(f,"Fully connected model has ","$(n_fully_connected_edges)"," edges and a score around ~ 0.95")  
     for i in 1:10000
     	 flush(stdout)   

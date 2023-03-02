@@ -436,16 +436,18 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
     score_vector=Float32[]
     contact_matrix=zeros(Int8,length(number_matrix[1,:]),length(number_matrix[1,:]))
     log_z=Float32(0)
+    println("The sequences have L = $(length(number_matrix[1,:]))
     println("Fully connected model has ",n_fully_connected_edges," edges and a score around ~ 0.95")
     open(filename, "w") do f  
+    write(f,"The sequences have L = $(length(number_matrix[1,:]))
     write(f,"Fully connected model has ","$(n_fully_connected_edges)"," edges and a score around ~ 0.95")  
     for i in 1:10000
     	 flush(stdout)   
     	 flush(f)                           
-         sequences=gibbs_sampling(q,h_local,Jij_couplings,sequences,site_degree,contact_list,5)
+         sequences=gibbs_sampling(q,h_local,Jij_couplings,sequences,site_degree,contact_list,5)					
          pij_training=fij_two_point(sequences[1:number-2000,:],q,pseudo_count)
          pij_lgz=fij_two_point(sequences[number-1999:end,:],q,0)  
-         if (i-1)%15==0 && i!=1
+         if (i-1)%15==0 #&& i!=1
             cij_model=correlation_two_point(sequences,q,0)  
             score=cor(cij_target,cij_model)    
             score_vector=push!(score_vector,score)

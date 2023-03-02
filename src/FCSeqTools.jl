@@ -455,15 +455,15 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
             score=round(score;digits=3)            
             print("   Score = ",score) 
             write(f,"   Score = ","$(score)")
-	    if i==1
-	       println("\n")
-	       write(f,"\n")
-	    end
             energy1=-sum(fij_two_point(sequences,q,0).*Jij_couplings)-sum(freq_single_point(sequences,q,0).*h_local)               
             print("    <E> = ",round(energy1;digits=2), "    log(Z) = ",round(log_z;digits=2)) 
             print("   S = ",round(log_z+energy1;digits=2))
 	    write(f,"    <E> = ","$(round(energy1;digits=2))", "    log(Z) = ","$(round(log_z;digits=2))")  
-            write(f,"   S = ","$(round(log_z+energy1;digits=2))")                 
+            write(f,"   S = ","$(round(log_z+energy1;digits=2))")    
+	    if i==1
+	       println("\n")
+	       write(f,"\n")
+	    end
             if score >=Float32(0.95)
             	println("\n \nThe selceted model has ",n_edges," edges and a score = $(round(score;digits=2))")
             	write(f,"\n \nThe selceted model has ","$(n_edges)"," edges and a score = $(round(score;digits=2)) \n")

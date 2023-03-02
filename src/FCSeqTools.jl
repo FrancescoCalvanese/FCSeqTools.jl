@@ -461,7 +461,7 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
 	    write(f,"    <E> = ","$(round(energy1;digits=2))", "    log(Z) = ","$(round(log_z;digits=2))")  
             write(f,"   S = ","$(round(log_z+energy1;digits=2))")    
 	    if i==1
-	       println("\n")
+	       print("\n")
 	       write(f,"\n")
 	    end
             if score >=Float32(0.95)

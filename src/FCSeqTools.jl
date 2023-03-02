@@ -449,6 +449,10 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
          pij_training=fij_two_point(sequences[1:number-2000,:],q,pseudo_count)
          pij_lgz=fij_two_point(sequences[number-1999:end,:],q,0)  
          if (i-1)%15==0 #&& i!=1
+	    if i==1
+	       println("\n")
+	       write(f,"\n")
+	    end
             cij_model=correlation_two_point(sequences,q,0)  
             score=cor(cij_target,cij_model)    
             score_vector=push!(score_vector,score)

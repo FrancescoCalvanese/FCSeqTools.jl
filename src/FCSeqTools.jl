@@ -449,16 +449,16 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
          pij_training=fij_two_point(sequences[1:number-2000,:],q,pseudo_count)
          pij_lgz=fij_two_point(sequences[number-1999:end,:],q,0)  
          if (i-1)%15==0 #&& i!=1
-	    if i==1
-	       println("\n")
-	       write(f,"\n")
-	    end
             cij_model=correlation_two_point(sequences,q,0)  
             score=cor(cij_target,cij_model)    
             score_vector=push!(score_vector,score)
             score=round(score;digits=3)            
             print("   Score = ",score) 
             write(f,"   Score = ","$(score)")
+	    if i==1
+	       println("\n")
+	       write(f,"\n")
+	    end
             energy1=-sum(fij_two_point(sequences,q,0).*Jij_couplings)-sum(freq_single_point(sequences,q,0).*h_local)               
             print("    <E> = ",round(energy1;digits=2), "    log(Z) = ",round(log_z;digits=2)) 
             print("   S = ",round(log_z+energy1;digits=2))

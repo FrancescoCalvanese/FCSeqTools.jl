@@ -421,7 +421,7 @@ end
 
 
 
-function E_A_A(q,pseudo_count,number,number_matrix,filename)
+function eaDCA(q,pseudo_count,number,number_matrix,filename)
     edge_list=zeros(Int64,0,2)
     n_edges=0
     n_fully_connected_edges=Int64(length(number_matrix[1,:])*(length(number_matrix[1,:])-1)*0.5)
@@ -491,6 +491,16 @@ function E_A_A(q,pseudo_count,number,number_matrix,filename)
     end  
     end
     return score_vector,likelihood_gain_vector, sequences,Jij_couplings,h_local,contact_list,site_degree,edge_list
+end
+
+
+function sequences_energy(sequences,q,h,Jij)
+    energies = []
+    for i in 1:length(sequences[:,1])
+        E = sum(freq_single_point(sequences[i,:]',q,0).*h)+1*sum(fij_two_point(sequences[i,:]',q,0).*Jij)
+        push!(energies,E)
+    end
+    return -energies
 end
 
 

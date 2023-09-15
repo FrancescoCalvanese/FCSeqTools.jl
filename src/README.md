@@ -60,6 +60,9 @@ Computes the profile model entropy for a number matrix with $q$ states per site.
 - `max_kl_divergence(fij,pij)`  
 Takes as input two two-point frequencies matrices and outputs  the $\underset{ij}{argmax}$  $D_{kl}( f_{ij} || p_{ij} )$ and the $\underset{ij}{max}$     $D_{kl}( f_{ij} || p_{ij} )$
 
+- `sequences_energy(matrix,q,h_local,Jij)
+Takes as input a sequences number matrix with $q$ states per site, the model local fields "h_local" and the coupling "Jij" and outputs the energies of the sequences
+
 
 ## Generative models & Sampling 
 

@@ -494,10 +494,10 @@ function eaDCA(q,pseudo_count,number,number_matrix,filename)
 end
 
 
-function sequences_energy(sequences,q,h,Jij)
+function sequences_energy(matrix,q,h_local,Jij)
     energies = []
-    for i in 1:length(sequences[:,1])
-        E = sum(freq_single_point(sequences[i,:]',q,0).*h)+1*sum(fij_two_point(sequences[i,:]',q,0).*Jij)
+    for i in 1:length(matrix[:,1])
+        E = sum(freq_single_point(matrix[i,:]',q,0).*h_local)+1*sum(fij_two_point(matrix[i,:]',q,0).*Jij)
         push!(energies,E)
     end
     return -energies

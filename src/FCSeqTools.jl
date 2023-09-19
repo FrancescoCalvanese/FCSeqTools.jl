@@ -18,7 +18,7 @@ f=open(filename)
      while lines[i]=="" 
 	if i<length(lines)
 		i=i+1
-	else break
+	else return letter_matrix
         end
      end
       if lines[i][1]=='>'

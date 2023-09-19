@@ -12,21 +12,16 @@ using ExportAll
 
 function do_letter_matrix(filename)
 f=open(filename)
-    lines, count = readlines(f), 0
+    lines=readlines(f)
+    lines=[line for line in lines if !isempty(strip(line))]
     letter_matrix=Array{Char,2}(undef,Int64(1),Int64(0))
     for i in 1:Int64(length(lines))
-     if lines[i] == ""
-	continue
-     else count +=1
-     end
       if lines[i][1]=='>'
         j=1
         temp=join(lines[i+j])
         while j!=-1
             if i+j+1 <= length(lines)
-		if lines[i+j+1]=="" 
-		j=-1
-		elseif lines[i+j+1][1]!='>' 
+        	if lines[i+j+1][1]!='>'
                 temp=temp*join(lines[i+j+1])
                 j=j+1
             else j=-1
@@ -34,7 +29,7 @@ f=open(filename)
             else j=-1
             end
         end
-	if count==1
+	if i==1
 		letter_matrix=hcat(letter_matrix,reshape(collect(temp),1,length(collect(temp))))
 	else
         letter_matrix=vcat(letter_matrix,reshape(collect(temp),1,length(collect(temp))))

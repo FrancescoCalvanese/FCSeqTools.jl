@@ -19,7 +19,8 @@ f=open(filename)
 	if i<length(lines)
 		i=i+1
 	else break
-    	end
+        end
+     end
       if lines[i][1]=='>'
         j=1
         temp=join(lines[i+j])

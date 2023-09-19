@@ -23,7 +23,9 @@ f=open(filename)
         temp=join(lines[i+j])
         while j!=-1
             if i+j+1 <= length(lines)
-        	if lines[i+j+1][1]!='>' && lines[i+j+1]!=""
+		if lines[i+j+1]!="" 
+		j=-1
+		elseif lines[i+j+1][1]!='>' 
                 temp=temp*join(lines[i+j+1])
                 j=j+1
             else j=-1

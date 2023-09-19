@@ -15,9 +15,11 @@ f=open(filename)
     lines=readlines(f)
     letter_matrix=Array{Char,2}(undef,Int64(1),Int64(0))
     for i in 1:Int64(length(lines))
-     while lines[i]=="" && i<length(lines)
-	i=i+1
-     end
+     while lines[i]=="" 
+	if i<length(lines)
+		i=i+1
+	else break
+    	end
       if lines[i][1]=='>'
         j=1
         temp=join(lines[i+j])

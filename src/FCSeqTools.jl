@@ -17,7 +17,7 @@ f=open(filename)
     for i in 1:Int64(length(lines))
      while lines[i]=="" 
 	if i<length(lines)
-		i=i+1
+		continue
 	else return letter_matrix
         end
      end

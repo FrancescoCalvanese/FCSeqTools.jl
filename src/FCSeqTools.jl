@@ -15,7 +15,7 @@ f=open(filename)
     lines=readlines(f)
     letter_matrix=Array{Char,2}(undef,Int64(1),Int64(0))
     for i in 1:Int64(length(lines))
-     while lines[i][1]==''
+     while lines[i]==[]
 	i=i+1
      end
       if lines[i][1]=='>'

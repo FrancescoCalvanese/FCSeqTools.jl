@@ -85,7 +85,7 @@ it outputs a sample of "number" sequences from the number matrix that respects t
 
 
 
-## Utils
+## Utilities
 
 
 - `ss_matrix_to_dot_bracket(ss_contact_matrix)`  

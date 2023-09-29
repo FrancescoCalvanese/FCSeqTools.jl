@@ -154,12 +154,10 @@ end
 
 
 function one_hot_encode(number_matrix,q)
-    one_hot_encoded_data=zeros(Int8,length(number_matrix[:,1]),(q-1)*length(number_matrix[1,:]))
+    one_hot_encoded_data=zeros(Int8,length(number_matrix[:,1]),(q)*length(number_matrix[1,:]))
     for i in 1:length(number_matrix[:,1])
         for j in 1:length(number_matrix[1,:])
-            if number_matrix[i,j]!=q
-            one_hot_encoded_data[i,(q-1)*(j-1)+(number_matrix[i,j])]=1
-            end
+            one_hot_encoded_data[i,(q)*(j-1)+(number_matrix[i,j])]=1
         end
     end          
     return one_hot_encoded_data

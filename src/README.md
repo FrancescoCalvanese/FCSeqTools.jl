@@ -15,6 +15,9 @@ Takes a protein letter matrix and converts it in a number matrix. Sequences with
 - `print_fasta_to_file_rna(number_matrix,filename,name)`   
 Takes an RNA number matrix and prints it in a file named "filename" in Fasta format. The sequences are labelled with ">i_name"
 
+- `print_fasta_to_file_protein(number_matrix,filename,name)`   
+Takes a protein number matrix and prints it in a file named "filename" in Fasta format. The sequences are labelled with ">i_name"
+
 - `print_fasta_rna(number_matrix,name)`  
 Takes an RNA number matrix and prints it in Fasta format. The sequences are labelled with ">i_name"
 

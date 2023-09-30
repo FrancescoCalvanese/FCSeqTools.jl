@@ -328,6 +328,30 @@ end
 
 
 
+function print_fasta_to_file_protein(number_matrix, filename, name)
+    amino_acid_map = Dict(
+        1 => "A", 2 => "C", 3 => "D", 4 => "E", 5 => "F",
+        6 => "G", 7 => "H", 8 => "I", 9 => "K", 10 => "L",
+        11 => "M", 12 => "N", 13 => "P", 14 => "Q", 15 => "R",
+        16 => "S", 17 => "T", 18 => "V", 19 => "W", 20 => "Y",
+        21 => "-"
+    )
+    
+    open(filename, "w") do f
+        for i in 1:size(number_matrix, 1)
+            header = i == 1 ? ">1_$(name) \n" : "\n>$(i)_$(name) \n"
+            write(f, header)
+            
+            for j in 1:size(number_matrix, 2)
+                amino_acid = amino_acid_map[number_matrix[i, j]]
+                write(f, amino_acid)
+            end
+        end
+    end
+end
+
+
+
 function print_fasta_rna(number_matrix,name)
     for i in 1:length(number_matrix[:,1])
         if i==1

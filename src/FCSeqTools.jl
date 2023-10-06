@@ -518,10 +518,9 @@ end
 
 
 function sequences_energy(matrix,q,h_local,Jij)
-    energies = []
+    energies = zeros(Float32,length(matrix[:,1])
     for i in 1:length(matrix[:,1])
-        E = sum(freq_single_point(matrix[i,:]',q,0).*h_local)+1*sum(fij_two_point(matrix[i,:]',q,0).*Jij)
-        push!(energies,E)
+        energies[i] = sum(freq_single_point(matrix[i,:]',q,0).*h_local)+1*sum(fij_two_point(matrix[i,:]',q,0).*Jij)
     end
     return -energies
 end

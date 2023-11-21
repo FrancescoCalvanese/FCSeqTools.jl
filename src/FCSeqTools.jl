@@ -445,7 +445,6 @@ end
 
 
 function eaDCA(q,pseudo_count,number,number_matrix,filename)
-    start_time = time()
     edge_list=zeros(Int64,0,2)
     n_edges=0
     n_fully_connected_edges=Int64(length(number_matrix[1,:])*(length(number_matrix[1,:])-1)*0.5)
@@ -465,6 +464,7 @@ function eaDCA(q,pseudo_count,number,number_matrix,filename)
     open(filename, "w") do f  
     write(f,"Fully connected model has ","$(n_fully_connected_edges)"," edges and a score around ~ 0.95","\n")  
     write(f,"L = $(length(number_matrix[1,:]))               Profile Model : ")
+    start_time = time()
 
     for i in 1:10000
     	 flush(stdout)   

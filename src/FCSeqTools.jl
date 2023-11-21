@@ -445,6 +445,7 @@ end
 
 
 function eaDCA(q,pseudo_count,number,number_matrix,filename)
+    start_time = time()
     edge_list=zeros(Int64,0,2)
     n_edges=0
     n_fully_connected_edges=Int64(length(number_matrix[1,:])*(length(number_matrix[1,:])-1)*0.5)
@@ -475,12 +476,14 @@ function eaDCA(q,pseudo_count,number,number_matrix,filename)
             cij_model=correlation_two_point(sequences,q,0)  
             score=cor(cij_target,cij_model)    
             score_vector=push!(score_vector,score)
-            score=round(score;digits=3)            
+            score=round(score;digits=3)    
+	    elapsed_time = time() - start_time
             print("   Score = ",score) 
             write(f,"   Score = ","$(score)")
             energy1=-sum(fij_two_point(sequences,q,0).*Jij_couplings)-sum(freq_single_point(sequences,q,0).*h_local)               
             print("    <E> = ",round(energy1;digits=2), "    log(Z) = ",round(log_z;digits=2)) 
             print("   S = ",round(log_z+energy1;digits=2))
+            print("   e_t  = ",round(elapsed_time;digits=2))	
 	    write(f,"    <E> = ","$(round(energy1;digits=2))", "    log(Z) = ","$(round(log_z;digits=2))")  
             write(f,"   S = ","$(round(log_z+energy1;digits=2))")    
 	    if i==1

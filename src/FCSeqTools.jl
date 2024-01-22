@@ -6,7 +6,7 @@ using Distances
 using StatsBase
 using Random
 using Statistics
-using Printf
+# using Printf
 using ExportAll
 
 

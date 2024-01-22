@@ -6,6 +6,7 @@ using Distances
 using StatsBase
 using Random
 using Statistics
+using Printf
 using ExportAll
 
 
@@ -629,7 +630,58 @@ function dot_bracket_to_ss_matrix(dot_bracket_ss)
 		end
     return contact_list, contact_matrix 
 end	
- 
+
+function sample_from_model(h, Jij, N, steps)
+q = sqrt(length(Jij[1,1,:]))
+q = round(Int, q)
+N = round(Int, N/2)
+L = length(Jij[1,:,1])
+contact_matrix = zeros(L,L)
+for i in 1:L
+    for j in i+1:L
+        if Jij[i,j,:] != zeros(q*q)
+            contact_matrix[i,j] = 1
+        end
+    end
+end
+contact_matrix = contact_matrix + contact_matrix'
+site_degree = Int64.([sum(contact_matrix[i, :]) for i in 1:size(contact_matrix, 1)])
+contact_list = zeros(Int64,L,L) 
+for i in 1:L
+    idx = 0
+    for j in 1:L
+        if contact_matrix[i,j] == 1
+            idx = idx + 1
+            contact_list[idx,i] = j
+        end
+    end
+end
+chain_1_t = Int8.(rand(1:q, N, L))
+chain_1_half_t = Int8.(rand(1:q, N, L))
+copy!(chain_1_half_t, chain_1_t)
+chain_2_t = Int8.(rand(1:q, N, L))
+Hamming1=Float64[]
+Hamming2=Float64[]
+Hamming3=Float64[]
+for i in 1:steps  
+     Random.seed!(i) 
+     chain_1_t = gibbs_sampling(q,h,Jij,chain_1_t,site_degree,contact_list,1)
+     chain_2_t = gibbs_sampling(q,h,Jij,chain_2_t,site_degree,contact_list,1)
+     if i%2==0
+        Random.seed!(Int64(i/2))
+        chain_1_half_t =gibbs_sampling(q,h,Jij,chain_1_half_t, site_degree,contact_list,1)
+            temp = L - hamming(chain_1_t,chain_1_half_t)/N
+            print("corr_auto = ")
+            @printf("%.2f", temp )
+            temp=L - hamming(chain_1_t,chain_2_t)/N
+            print("     corr_indip = ")
+            @printf("%.2f", temp )
+            print("\n")
+        end
+end
+return vcat(chain_1_t, chain_2_t)
+end
+
 
 		
 @exportAll()

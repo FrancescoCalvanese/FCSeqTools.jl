@@ -670,10 +670,10 @@ for i in 1:steps
      if i%2==0
         Random.seed!(Int64(i/2))
         chain_1_half_t =gibbs_sampling(q,h,Jij,chain_1_half_t, site_degree,contact_list,1)
-            temp = L - hamming(chain_1_t,chain_1_half_t)/N
+            temp = (L - hamming(chain_1_t,chain_1_half_t))/N
             print("corr_auto = ")
             @printf("%.2f", temp )
-            temp=L - hamming(chain_1_t,chain_2_t)/N
+            temp=(L - hamming(chain_1_t,chain_2_t))/N
             print("     corr_indip = ")
             @printf("%.2f", temp )
             print("\n")

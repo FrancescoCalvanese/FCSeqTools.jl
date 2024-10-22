@@ -12,32 +12,47 @@ using ExportAll
 
 
 function do_letter_matrix(filename)
-f=open(filename)
-    lines=readlines(f)
-    lines=[line for line in lines if !isempty(strip(line))]
-    letter_matrix=Array{Char,2}(undef,Int64(1),Int64(0))
-    for i in 1:Int64(length(lines))
-      if lines[i][1]=='>'
-        j=1
-        temp=join(lines[i+j])
-        while j!=-1
-            if i+j+1 <= length(lines)
-        	if lines[i+j+1][1]!='>'
-                temp=temp*join(lines[i+j+1])
-                j=j+1
-            else j=-1
+    # Efficiently read and preprocess the lines
+    lines = open(readlines, filename)
+    lines = [strip(line) for line in lines if !isempty(strip(line))]
+    sequences = String[]
+    temp_seq = ""
+    # Parse the sequences from the file
+    for line in lines
+        if startswith(line, '>')
+            if !isempty(temp_seq)
+                push!(sequences, temp_seq)
+                temp_seq = ""
             end
-            else j=-1
-            end
+        else
+            temp_seq *= line
         end
-	if i==1
-		letter_matrix=hcat(letter_matrix,reshape(collect(temp),1,length(collect(temp))))
-	else
-        letter_matrix=vcat(letter_matrix,reshape(collect(temp),1,length(collect(temp))))
     end
+    # Add the last sequence if exists
+    if !isempty(temp_seq)
+        push!(sequences, temp_seq)
     end
+    # Ensure there is at least one sequence
+    if isempty(sequences)
+        throw(ArgumentError("No sequences found in the file."))
     end
-  return letter_matrix
+    # Check that all sequences have the same length
+    seq_lengths = length.(sequences)
+    first_length = seq_lengths[1]
+    for (idx, len) in enumerate(seq_lengths)
+        if len != first_length
+            throw(ArgumentError("Sequence at index $idx has length $len, which does not match the expected length of $first_length. All sequences must be the same length."))
+        end
+    end
+    num_seqs = length(sequences)
+    seq_length = first_length
+    # Preallocate the letter matrix
+    letter_matrix = Array{Char}(undef, num_seqs, seq_length)
+    # Populate the letter matrix
+    for i in 1:num_seqs
+        letter_matrix[i, :] = collect(sequences[i])
+    end
+    return letter_matrix
 end
 
 

@@ -1,5 +1,5 @@
 Fully connected model has 2211 edges and a score around ~ 0.95
-L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) = 0.0   S = 74.33   e_t  = 1.47
+L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) = 0.0   S = 74.33   e_t  = 0.84
 
 [17  30]  iter: 1   edges: 1   0.05%
 [16  31]  iter: 2   edges: 2   0.09%
@@ -15,7 +15,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [36  47]  iter: 12   edges: 12   0.54%
 [9  57]  iter: 13   edges: 13   0.59%
 [2  66]  iter: 14   edges: 14   0.63%
-[8  58]  iter: 15   edges: 15   0.68%   Score = 0.435    <E> = 60.43    log(Z) = 0.03   S = 60.46   e_t  = 21.18
+[8  58]  iter: 15   edges: 15   0.68%   Score = 0.435    <E> = 60.43    log(Z) = 0.03   S = 60.46   e_t  = 5.57
 [34  49]  iter: 16   edges: 16   0.72%
 [10  56]  iter: 17   edges: 17   0.77%
 [41  61]  iter: 18   edges: 18   0.81%
@@ -30,7 +30,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [12  45]  iter: 27   edges: 27   1.22%
 [28  29]  iter: 28   edges: 28   1.27%
 [8  57]  iter: 29   edges: 29   1.31%
-[17  18]  iter: 30   edges: 30   1.36%   Score = 0.674    <E> = 52.61    log(Z) = 0.11   S = 52.73   e_t  = 41.82
+[17  18]  iter: 30   edges: 30   1.36%   Score = 0.674    <E> = 52.61    log(Z) = 0.11   S = 52.73   e_t  = 10.08
 [22  23]  iter: 31   edges: 31   1.4%
 [32  33]  iter: 32   edges: 32   1.45%
 [20  27]  iter: 33   edges: 33   1.49%
@@ -45,7 +45,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [25  26]  iter: 42   edges: 42   1.9%
 [6  7]  iter: 43   edges: 43   1.94%
 [38  60]  iter: 44   edges: 44   1.99%
-[53  54]  iter: 45   edges: 45   2.04%   Score = 0.808    <E> = 47.65    log(Z) = 0.28   S = 47.94   e_t  = 63.3
+[53  54]  iter: 45   edges: 45   2.04%   Score = 0.808    <E> = 47.65    log(Z) = 0.28   S = 47.94   e_t  = 14.78
 [33  49]  iter: 46   edges: 46   2.08%
 [37  46]  iter: 47   edges: 47   2.13%
 [56  57]  iter: 48   edges: 48   2.17%
@@ -60,7 +60,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [35  64]  iter: 57   edges: 57   2.58%
 [64  65]  iter: 58   edges: 58   2.62%
 [41  48]  iter: 59   edges: 59   2.67%
-[8  49]  iter: 60   edges: 60   2.71%   Score = 0.852    <E> = 44.87    log(Z) = 0.51   S = 45.38   e_t  = 85.47
+[8  49]  iter: 60   edges: 60   2.71%   Score = 0.852    <E> = 44.87    log(Z) = 0.51   S = 45.38   e_t  = 19.69
 [66  67]  iter: 61   edges: 61   2.76%
 [47  50]  iter: 62   edges: 62   2.8%
 [63  64]  iter: 63   edges: 63   2.85%
@@ -75,7 +75,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [2  23]  iter: 72   edges: 72   3.26%
 [10  47]  iter: 73   edges: 73   3.3%
 [2  41]  iter: 74   edges: 74   3.35%
-[18  32]  iter: 75   edges: 75   3.39%   Score = 0.875    <E> = 43.56    log(Z) = 0.62   S = 44.18   e_t  = 108.8
+[18  32]  iter: 75   edges: 75   3.39%   Score = 0.875    <E> = 43.56    log(Z) = 0.62   S = 44.18   e_t  = 24.89
 [30  57]  iter: 76   edges: 76   3.44%
 [19  65]  iter: 77   edges: 77   3.48%
 [18  21]  iter: 78   edges: 78   3.53%
@@ -90,7 +90,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [1  63]  iter: 87   edges: 87   3.93%
 [11  58]  iter: 88   edges: 88   3.98%
 [22  27]  iter: 89   edges: 89   4.03%
-[2  4]  iter: 90   edges: 90   4.07%   Score = 0.891    <E> = 42.46    log(Z) = 0.74   S = 43.2   e_t  = 133.08
+[2  4]  iter: 90   edges: 90   4.07%   Score = 0.891    <E> = 42.46    log(Z) = 0.74   S = 43.2   e_t  = 30.21
 [65  66]  iter: 91   edges: 91   4.12%
 [2  21]  iter: 92   edges: 92   4.16%
 [48  52]  iter: 93   edges: 93   4.21%
@@ -105,7 +105,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [47  61]  iter: 102   edges: 102   4.61%
 [51  52]  iter: 103   edges: 103   4.66%
 [24  40]  iter: 104   edges: 104   4.7%
-[62  65]  iter: 105   edges: 105   4.75%   Score = 0.902    <E> = 41.62    log(Z) = 0.85   S = 42.47   e_t  = 158.46
+[62  65]  iter: 105   edges: 105   4.75%   Score = 0.902    <E> = 41.62    log(Z) = 0.85   S = 42.47   e_t  = 35.69
 [18  58]  iter: 106   edges: 106   4.79%
 [32  65]  iter: 107   edges: 107   4.84%
 [16  23]  iter: 108   edges: 108   4.88%
@@ -120,7 +120,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [10  11]  iter: 117   edges: 117   5.29%
 [1  57]  iter: 118   edges: 118   5.34%
 [49  61]  iter: 119   edges: 119   5.38%
-[16  29]  iter: 120   edges: 120   5.43%   Score = 0.913    <E> = 40.85    log(Z) = 0.97   S = 41.81   e_t  = 184.5
+[16  29]  iter: 120   edges: 120   5.43%   Score = 0.913    <E> = 40.85    log(Z) = 0.97   S = 41.81   e_t  = 41.41
 [15  22]  iter: 121   edges: 121   5.47%
 [33  48]  iter: 122   edges: 122   5.52%
 [19  30]  iter: 123   edges: 123   5.56%
@@ -135,7 +135,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [1  41]  iter: 132   edges: 132   5.97%
 [50  51]  iter: 133   edges: 133   6.02%
 [27  40]  iter: 134   edges: 134   6.06%
-[31  67]  iter: 135   edges: 135   6.11%   Score = 0.919    <E> = 40.47    log(Z) = 1.07   S = 41.54   e_t  = 210.83
+[31  67]  iter: 135   edges: 135   6.11%   Score = 0.919    <E> = 40.47    log(Z) = 1.07   S = 41.54   e_t  = 47.19
 [26  67]  iter: 136   edges: 136   6.15%
 [21  27]  iter: 137   edges: 137   6.2%
 [33  45]  iter: 138   edges: 138   6.24%
@@ -150,7 +150,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [4  21]  iter: 147   edges: 147   6.65%
 [17  26]  iter: 148   edges: 148   6.69%
 [19  52]  iter: 149   edges: 149   6.74%
-[17  47]  iter: 150   edges: 150   6.78%   Score = 0.927    <E> = 39.87    log(Z) = 1.13   S = 40.99   e_t  = 239.94
+[17  47]  iter: 150   edges: 150   6.78%   Score = 0.927    <E> = 39.87    log(Z) = 1.13   S = 40.99   e_t  = 53.21
 [14  22]  iter: 151   edges: 151   6.83%
 [29  65]  iter: 152   edges: 152   6.87%
 [16  62]  iter: 153   edges: 153   6.92%
@@ -165,7 +165,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [1  52]  iter: 162   edges: 162   7.33%
 [26  64]  iter: 163   edges: 163   7.37%
 [1  29]  iter: 164   edges: 164   7.42%
-[40  50]  iter: 165   edges: 165   7.46%   Score = 0.929    <E> = 39.19    log(Z) = 1.18   S = 40.38   e_t  = 269.21
+[40  50]  iter: 165   edges: 165   7.46%   Score = 0.929    <E> = 39.19    log(Z) = 1.18   S = 40.38   e_t  = 59.28
 [32  49]  iter: 166   edges: 166   7.51%
 [49  67]  iter: 167   edges: 167   7.55%
 [30  48]  iter: 168   edges: 168   7.6%
@@ -180,7 +180,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [10  29]  iter: 177   edges: 177   8.01%
 [24  57]  iter: 178   edges: 178   8.05%
 [1  27]  iter: 179   edges: 179   8.1%
-[8  41]  iter: 180   edges: 180   8.14%   Score = 0.936    <E> = 38.91    log(Z) = 1.23   S = 40.14   e_t  = 299.83
+[8  41]  iter: 180   edges: 180   8.14%   Score = 0.936    <E> = 38.91    log(Z) = 1.23   S = 40.14   e_t  = 65.47
 [51  55]  iter: 181   edges: 181   8.19%
 [11  62]  iter: 182   edges: 182   8.23%
 [3  28]  iter: 183   edges: 183   8.28%
@@ -195,7 +195,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [40  56]  iter: 192   edges: 192   8.68%
 [1  25]  iter: 193   edges: 193   8.73%
 [32  67]  iter: 194   edges: 194   8.77%
-[18  25]  iter: 195   edges: 195   8.82%   Score = 0.94    <E> = 38.5    log(Z) = 1.31   S = 39.81   e_t  = 330.07
+[18  25]  iter: 195   edges: 195   8.82%   Score = 0.94    <E> = 38.5    log(Z) = 1.31   S = 39.81   e_t  = 71.89
 [9  58]  iter: 196   edges: 196   8.86%
 [23  64]  iter: 197   edges: 197   8.91%
 [24  27]  iter: 198   edges: 198   8.96%
@@ -210,7 +210,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [11  41]  iter: 207   edges: 207   9.36%
 [21  28]  iter: 208   edges: 208   9.41%
 [4  5]  iter: 209   edges: 209   9.45%
-[30  64]  iter: 210   edges: 210   9.5%   Score = 0.942    <E> = 37.96    log(Z) = 1.38   S = 39.34   e_t  = 361.95
+[30  64]  iter: 210   edges: 210   9.5%   Score = 0.942    <E> = 37.96    log(Z) = 1.38   S = 39.34   e_t  = 78.37
 [21  31]  iter: 211   edges: 211   9.54%
 [11  36]  iter: 212   edges: 212   9.59%
 [35  67]  iter: 213   edges: 213   9.63%
@@ -225,7 +225,7 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [2  9]  iter: 222   edges: 222   10.04%
 [47  51]  iter: 223   edges: 223   10.09%
 [10  51]  iter: 224   edges: 224   10.13%
-[58  67]  iter: 225   edges: 225   10.18%   Score = 0.945    <E> = 37.53    log(Z) = 1.47   S = 39.0   e_t  = 393.65
+[58  67]  iter: 225   edges: 225   10.18%   Score = 0.945    <E> = 37.53    log(Z) = 1.47   S = 39.0   e_t  = 84.98
 [13  49]  iter: 226   edges: 226   10.22%
 [1  62]  iter: 227   edges: 227   10.27%
 [26  63]  iter: 228   edges: 228   10.31%
@@ -240,6 +240,6 @@ L = 67               Profile Model :    Score = -0.005    <E> = 74.33    log(Z) 
 [12  34]  iter: 237   edges: 237   10.72%
 [1  30]  iter: 238   edges: 238   10.76%
 [49  55]  iter: 239   edges: 239   10.81%
-[14  47]  iter: 240   edges: 240   10.85%   Score = 0.95    <E> = 37.1    log(Z) = 1.57   S = 38.67   e_t  = 427.14
+[14  47]  iter: 240   edges: 240   10.85%   Score = 0.95    <E> = 37.1    log(Z) = 1.57   S = 38.67   e_t  = 91.75
  
 The selceted model has 240 edges and a score = 0.95 

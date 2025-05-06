@@ -399,7 +399,9 @@ function site_entropy_vector(matrix,q,pseudo_count,threshold)
 	for i in 1:length(matrix[1,:])
 	    temp=0
 	    for j in 1:q
+		if frequency[q*(i-1)+j] != 0
 		temp=temp+frequency[q*(i-1)+j]*log(frequency[q*(i-1)+j])
+		end
 	    end
 	    entropy_vector[i]=temp
 	end
